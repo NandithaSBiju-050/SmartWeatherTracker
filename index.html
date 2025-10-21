@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Weather Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="container" style="max-width:1100px; margin-top:18px">
+    <nav class="topnav">
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section class="container card" id="hero" style="padding:32px; margin-top:40px;">
+    <h1 style="font-size:34px; margin-bottom:6px">Your Smart Way to Track the Weather</h1>
+    <p class="meta">Instant local weather, 7-day forecast, and smart insights — all in one beautiful app.</p>
+    <div style="margin-top:14px">
+      <button id="getStarted" class="cta">Get Started</button>
+    </div>
+  </section>
+
+  <main class="container" id="mainApp" style="margin-top:22px;">
+    <section id="mainSearch" class="card">
+      <h2>Check the weather</h2>
+      <div class="search">
+        <input type="text" id="cityInput" placeholder="Enter city name (e.g. Delhi, IN)">
+        <button id="searchBtn">Get Weather</button>
+        <button id="geoBtn" title="Use my location">Use my location</button>
+        <div class="units">
+          <label><input type="radio" name="unit" value="metric" checked> °C</label>
+          <label><input type="radio" name="unit" value="imperial"> °F</label>
+        </div>
+      </div>
+
+      <div id="weatherDisplay" class="card">
+        <div id="loader" class="loader hidden"></div>
+        <div id="result" class="result"></div>
+        <div style="margin-top:12px"><button id="addFav" class="fav-btn">Add to Favorites</button></div>
+      </div>
+
+      <div id="forecast" class="card" style="margin-top:12px; display:none;">
+        <h3>5-day forecast</h3>
+        <div id="forecastContent"></div>
+      </div>
+    </section>
+
+    <section class="recent card">
+      <h3>Recent searches</h3>
+      <ul id="recentList"></ul>
+    </section>
+
+    <section id="favorites" class="card" style="margin-top:18px">
+      <h3>Your favorites</h3>
+      <ul id="favList"></ul>
+      <p style="margin-top:8px"><a href="favorites.html">Manage favorites</a></p>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h3>Contact</h3>
+      <p>If you have feedback or questions, email: <a href="mailto:hello@example.com">hello@example.com</a></p>
+      <p><a href="contact.html">Open full contact page</a></p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+  <script src="script.fixed.js"></script>
+</body>
+</html>
+

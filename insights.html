@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Insights - SmartWeatherTracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="config.js"></script>
+  <script defer src="app.insights.js"></script>
+</head>
+<body>
+  <nav class="topnav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="insights.html">Insights</a>
+    <a href="settings.html">Settings</a>
+  </nav>
+  <main class="container">
+    <h1>Weather Insights</h1>
+    <p class="meta">Explore weekly temperature, humidity and wind speed trends.</p>
+
+    <div class="card" style="margin-top:12px">
+      <h3>Weekly Temperature</h3>
+      <canvas id="tempChart" width="600" height="200"></canvas>
+    </div>
+
+    <div class="card" style="margin-top:12px">
+      <h3>Humidity & Wind</h3>
+      <canvas id="humWindChart" width="600" height="200"></canvas>
+    </div>
+
+    <div style="margin-top:12px">
+      <label>Enter city for insights: <input id="insCity" placeholder="City, Country"></label>
+      <button id="insRun">Show Insights</button>
+    </div>
+  </main>
+</body>
+</html>

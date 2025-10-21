@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact - SmartWeatherTracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="insights.html">Insights</a>
+    <a href="login.html">Login</a>
+  </nav>
+  <main class="container">
+    <div class="card">
+      <h2>Contact</h2>
+      <p>If you need help, reach out at <a href="mailto:hello@example.com">hello@example.com</a></p>
+      <form id="contactForm">
+        <input id="cname" placeholder="Your name" />
+        <input id="cemail" placeholder="Your email" />
+        <textarea id="cmsg" placeholder="Message" style="width:100%; height:120px; margin-top:8px"></textarea>
+        <button id="cSend">Send</button>
+      </form>
+      <div id="cResp" style="margin-top:8px"></div>
+    </div>
+  </main>
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', e=>{
+      e.preventDefault(); document.getElementById('cResp').textContent='Thanks — message sent (demo).';
+    });
+  </script>
+</body>
+</html>

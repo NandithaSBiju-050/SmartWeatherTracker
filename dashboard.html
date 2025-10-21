@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard - SmartWeatherTracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <nav class="topnav">
+    <a href="dashboard.html">Dashboard</a>
+    <a href="favorites.html">Favorites</a>
+    <a href="settings.html">Settings</a>
+    <a href="#" id="logout">Logout</a>
+  </nav>
+  <main class="container">
+    <div class="search">
+      <input id="cityInputMain" placeholder="Search city (e.g. London, UK)">
+      <button id="searchMain">Search</button>
+    </div>
+
+    <section id="current" class="card">
+      <div id="curLoader" class="loader hidden"></div>
+      <div id="curResult"></div>
+      <div style="margin-top:12px">
+        <button id="addFavMain" class="fav-btn">Add to Favorites</button>
+      </div>
+    </section>
+
+    <section id="forecast7" class="card" style="display:none; margin-top:12px">
+      <h3>7-day forecast</h3>
+      <div id="forecast7Content"></div>
+    </section>
+  </main>
+</body>
+</html>
