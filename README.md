@@ -4,7 +4,13 @@ A simple, attractive static front-end weather app using OpenWeatherMap.
 
 Quick start
 
-1. Add your OpenWeatherMap API key to `config.js` (or better: run a server proxy). Do not commit your key.
+1. Copy `config.example.js` to `config.js` and set your OpenWeatherMap API key there:
+
+```javascript
+// config.js (local only — DO NOT commit)
+const API_KEY = 'YOUR_REAL_KEY_HERE';
+```
+
 2. Start a local server (Python):
 
 ```powershell
@@ -15,7 +21,8 @@ py -3 -m http.server 5500
 
 Security
 
-- The project currently stores the API key in `config.js` for local development. Remove the key before pushing to a public repository or use a server-side proxy.
+- Keep the real API key out of the repo. `config.js` is included in `.gitignore`.
+- If you accidentally committed a key, rotate it immediately in OpenWeatherMap and remove it from your repo history.
 
 Files
 
@@ -37,4 +44,9 @@ git branch -M main
 git push -u origin main
 ```
 
-If you want, I can scaffold a minimal Node proxy to hide the API key and help you push the repo (I can't push to your GitHub directly, but I can provide the exact commands and help troubleshoot).
+Deployment & hiding the API key
+
+- Deploy to GitHub Pages, Netlify or Vercel for a live demo.
+- To keep the API key secret in production, add a small server-side proxy or serverless function to inject the key.
+
+If you want, I can scaffold a minimal proxy or help deploy and wire a secure function for the API key.
